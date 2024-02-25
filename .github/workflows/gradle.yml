@@ -25,7 +25,7 @@ jobs:
         
     # Setup Chrome
     - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v2
+      uses: browser-actions/setup-chrome@v0.0.0
       
     # Setup Gradle if necessary
     - name: Setup Gradle Permissions
