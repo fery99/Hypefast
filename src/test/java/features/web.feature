@@ -4,7 +4,7 @@ Feature: Test Prodia Admin UAT version
   Scenario: Search (Admin Transaction) by name user and view order detail
     Given user is on page prodia Admin UAT
     When user input username "solvingTest@prodia.co.id"
-    And user input password "Test1234"
+    And user input password ""
     And click continue button
     And User on Homepage Admin UAT
     And user click admin tranaction
@@ -21,7 +21,7 @@ Feature: Test Prodia Admin UAT version
   Scenario: Admin Transaction Filter & Download
     Given user is on page prodia Admin UAT
     When user input username "solvingTest@prodia.co.id"
-    And user input password "Test1234"
+    And user input password ""
     And click continue button
     And User on Homepage Admin UAT
     And user click admin tranaction
@@ -42,7 +42,7 @@ Feature: Test Prodia Admin UAT version
   Scenario: search name of doctor and detail doctor
     Given user is on page prodia Admin UAT
     When user input username "solvingTest@prodia.co.id"
-    And user input password "Test1234"
+    And user input password ""
     And click continue button
     And User on Homepage Admin UAT
     And User click DHC master pricing
@@ -58,7 +58,7 @@ Feature: Test Prodia Admin UAT version
   Scenario: filter name of doctor by category and view detail doctor
     Given user is on page prodia Admin UAT
     When user input username "solvingTest@prodia.co.id"
-    And user input password "Test1234"
+    And user input password ""
     And click continue button
     And User on Homepage Admin UAT
     And User click DHC master pricing
