@@ -17,18 +17,6 @@ public class Utility {
 
     public static WebDriver driver;
 
-    public static File getJSONSchemaFile(String JSONFile) {
-        return new File("src/test/java/helper/JSONSchemaData/" + JSONFile);
-    }
-
-    public static String generateRandomEmail() {
-        String allowedChars = "abcdefghijklmnopqrstuvwxyz" + "1234567890" + "_-.";
-        String email = "";
-        String temp = RandomStringUtils.randomAlphanumeric(10); // Panjang email 10 karakter
-        email = temp + "@testdata.com";
-        return email;
-    }
-
     public static void startDriver() {
         ChromeOptions options = new ChromeOptions();
 //         options.addArguments("--headless");
@@ -36,11 +24,11 @@ public class Utility {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
-        Dimension size = new Dimension(800, 800);
+        Dimension size = new Dimension(1600, 800);
         options.addArguments("window-size=" + size.getWidth() + "," + size.getHeight());
         driver = new ChromeDriver(options);
-        Point position = new Point(650, 25);
-        driver.manage().window().setPosition(position);
+//        Point position = new Point(650, 25);
+//        driver.manage().window().setPosition(position);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(23));
     }
 
@@ -48,10 +36,10 @@ public class Utility {
         startDriver();
     }
 
-
+//
 //    public static void startDriver() {
 //        ChromeOptions options = new ChromeOptions();
-////        options.addArguments("--headless");
+//        options.addArguments("--headless");
 //        options.addArguments("--no-sandbox");
 //        options.addArguments("--disable-dev-shm-usage");
 //        options.addArguments("--remote-allow-origins=*");

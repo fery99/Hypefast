@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.testRunner" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-07-07T12:21:40" hostname="Aleph-0LVDCs-MacBook-Pro.local" time="75.736">
+  <properties/>
+  <testcase name="discover list product #1" classname="runner.testRunner" time="17.251"/>
+  <testcase name="user edit item product" classname="runner.testRunner" time="25.348"/>
+  <testcase name="discover list product #2" classname="runner.testRunner" time="14.947"/>
+  <testcase name="discover view mapping of stock inventory" classname="runner.testRunner" time="18.187"/>
+  <system-out><![CDATA[Before All
+
+@web
+Scenario: discover list product             # src/test/java/features/Product&Stock.feature:4
+Before Test
+  Given user on login page of Melaka-       # stepDef.Productstepdef.userOnLoginPageOfMelaka()
+  When input email- "ferysadewaa@gmail.com" # stepDef.Productstepdef.inputEmail(java.lang.String)
+  And input password- "Test1234"            # stepDef.Productstepdef.inputPassword(java.lang.String)
+  And click loggin button-                  # stepDef.Productstepdef.clickLogginButton()
+  And user on homepage dashboard-           # stepDef.Productstepdef.userOnHomepageDashboard()
+  And user click Product and Stock          # stepDef.Productstepdef.userClickProductAndStock()
+  And click product                         # stepDef.Productstepdef.clickProduct()
+  Then User get inform list of product      # stepDef.Productstepdef.userGetInformListOfProduct()
+After Test
+
+@web
+Scenario: user edit item product                    # src/test/java/features/Product&Stock.feature:15
+Before Test
+  Given user on login page of Melaka-               # stepDef.Productstepdef.userOnLoginPageOfMelaka()
+  When input email- "ferysadewaa@gmail.com"         # stepDef.Productstepdef.inputEmail(java.lang.String)
+  And input password- "Test1234"                    # stepDef.Productstepdef.inputPassword(java.lang.String)
+  And click loggin button-                          # stepDef.Productstepdef.clickLogginButton()
+  And user on homepage dashboard-                   # stepDef.Productstepdef.userOnHomepageDashboard()
+  And user click Product and Stock                  # stepDef.Productstepdef.userClickProductAndStock()
+  And click product                                 # stepDef.Productstepdef.clickProduct()
+  Then User get inform list of product              # stepDef.Productstepdef.userGetInformListOfProduct()
+  And user click select and click change            # stepDef.Productstepdef.userClickSelectAndClickChange()
+  And User on edit page and scroll down             # stepDef.Productstepdef.userOnEditPageAndScrollDown()
+  And user edit weight "1250"                       # stepDef.Productstepdef.userEditWeight(java.lang.String)
+  And user edit dimension product height "15"       # stepDef.Productstepdef.userEditDimensionProductHeight(java.lang.String)
+  And user click save                               # stepDef.Productstepdef.userClickSave()
+  Then user can see product has been edited on list # stepDef.Productstepdef.userCanSeeProductHasBeenEditedOnList()
+After Test
+
+@web
+Scenario: discover list product             # src/test/java/features/Product&Stock.feature:32
+Before Test
+  Given user on login page of Melaka-       # stepDef.Productstepdef.userOnLoginPageOfMelaka()
+  When input email- "ferysadewaa@gmail.com" # stepDef.Productstepdef.inputEmail(java.lang.String)
+  And input password- "Test1234"            # stepDef.Productstepdef.inputPassword(java.lang.String)
+  And click loggin button-                  # stepDef.Productstepdef.clickLogginButton()
+  And user on homepage dashboard-           # stepDef.Productstepdef.userOnHomepageDashboard()
+  And user click Product and Stock          # stepDef.Productstepdef.userClickProductAndStock()
+  And click inventory Stock                 # stepDef.Productstepdef.clickInventoryStock()
+  And User get list of product              # stepDef.Productstepdef.userGetListOfProduct()
+After Test
+
+@web
+Scenario: discover view mapping of stock inventory        # src/test/java/features/Product&Stock.feature:43
+Before Test
+  Given user on login page of Melaka-                     # stepDef.Productstepdef.userOnLoginPageOfMelaka()
+  When input email- "ferysadewaa@gmail.com"               # stepDef.Productstepdef.inputEmail(java.lang.String)
+  And input password- "Test1234"                          # stepDef.Productstepdef.inputPassword(java.lang.String)
+  And click loggin button-                                # stepDef.Productstepdef.clickLogginButton()
+  And user on homepage dashboard-                         # stepDef.Productstepdef.userOnHomepageDashboard()
+  And user click Product and Stock                        # stepDef.Productstepdef.userClickProductAndStock()
+  And click inventory Stock                               # stepDef.Productstepdef.clickInventoryStock()
+  And User get list of product                            # stepDef.Productstepdef.userGetListOfProduct()
+  And user icon pilih                                     # stepDef.Productstepdef.userIconPilih()
+  And user click maping of stock                          # stepDef.Productstepdef.userClickMapingOfStock()
+  Then user can see detail information about maping stock # stepDef.Productstepdef.userCanSeeDetailInformationAboutMapingStock()
+After Test
+After All
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+Jul 07, 2024 7:21:40 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Jul 07, 2024 7:21:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 123
+Jul 07, 2024 7:21:44 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 07, 2024 7:21:57 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Jul 07, 2024 7:21:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 123
+Jul 07, 2024 7:21:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 07, 2024 7:22:22 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Jul 07, 2024 7:22:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 123
+Jul 07, 2024 7:22:24 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 07, 2024 7:22:37 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Jul 07, 2024 7:22:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 123
+Jul 07, 2024 7:22:39 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
